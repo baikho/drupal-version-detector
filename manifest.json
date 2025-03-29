@@ -1,0 +1,25 @@
+
+{
+  "manifest_version": 3,
+  "name": "Drupal Version Detector",
+  "version": "1.0.0",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "description": "Detects the Drupal core version on any Drupal site.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon128.png",
+    "default_title": "Drupal Version Detector"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}
