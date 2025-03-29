@@ -22,14 +22,29 @@ function detectDrupalVersion() {
     if (metaMatch) return metaMatch[1];
   }
 
+  // Filtered ?v= version check
   const versionRegex = /[?&]v=(\d+\.\d+\.\d+)/;
   const assetTags = document.querySelectorAll('script[src], link[href]');
   const versions = new Set();
 
   for (const el of assetTags) {
     const src = el.getAttribute('src') || el.getAttribute('href');
-    const match = src && src.match(versionRegex);
-    if (match) versions.add(match[1]);
+
+    if (!src || !versionRegex.test(src)) continue;
+
+    const url = new URL(src, window.location.origin);
+
+    // Only accept local or Drupal-related paths
+    const isLocal = url.origin === window.location.origin;
+    const isDrupalish = url.pathname.includes('/core/') ||
+                        url.pathname.includes('/modules/') ||
+                        url.pathname.includes('/themes/') ||
+                        url.pathname.includes('/libraries/');
+
+    if (isLocal || isDrupalish) {
+      const match = src.match(versionRegex);
+      if (match) versions.add(match[1]);
+    }
   }
 
   const sortedVersions = [...versions].sort((a, b) => {
