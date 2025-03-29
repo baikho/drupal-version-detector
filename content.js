@@ -18,7 +18,7 @@ function detectDrupalVersion() {
   const meta = document.querySelector('meta[name="Generator"]');
   if (meta) {
     const content = meta.getAttribute('content');
-    const metaMatch = content.match(/Drupal\s+(\d+\.\d+(?:\.\d+)?)/);
+    const metaMatch = content.match(/Drupal\s+(\d+(?:\.\d+)?)/);
     if (metaMatch) return metaMatch[1];
   }
 
