@@ -1,8 +1,11 @@
 # Drupal Version Detector
 
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-brightgreen?logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/drupal-version-detector/dhanmiicielpdegicclkjbkgochdiihi)
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Chrome Web Store](https://img.shields.io/chrome-web-store/v/your-extension-id.svg)
-![Made for Drupal](https://img.shields.io/badge/Drupal-Dev%20Tool-orange)
+![Made for Drupal](https://img.shields.io/badge/Drupal-Dev%20Tool-blue?logo=drupal)
+[![Last Commit](https://img.shields.io/github/last-commit/baikho/drupal-tooler)](https://github.com/baikho/drupal-version-detector/commits/1.x)
+[![License: MIT](https://img.shields.io/github/license/baikho/drupal-version-detector)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/baikho/drupal-tooler?style=social)](https://github.com/baikho/drupal-version-detector/stargazers)
 
 A lightweight Chrome extension that detects the **Drupal core version** of any website and displays it in the toolbar. Built for contributors, reviewers, and site builders who work with Drupal every day.
 
@@ -28,11 +31,11 @@ A lightweight Chrome extension that detects the **Drupal core version** of any w
 
 ## 📦 Installation
 
-Available on the [Chrome Web Store](https://chrome.google.com/webstore/detail/your-extension-id).
+Available on the [Chrome Web Store](https://chromewebstore.google.com/detail/drupal-version-detector/dhanmiicielpdegicclkjbkgochdiihi).
 
 Or install manually:
 
-1. Clone this repo or [download the ZIP](https://github.com/baikho/drupal-version-detector/v1.0.0)
+1. Clone this repo or [download the ZIP](https://github.com/baikho/drupal-version-detector/releases)
 2. Visit `chrome://extensions`
 3. Enable "Developer mode"
 4. Click "Load unpacked" and select the extension folder
